@@ -1,0 +1,65 @@
+@import './_variables.scss';
+
+.select-chat-title {
+    height: 39px;	
+    width: auto;	
+    color: #FFFFFF;	
+    font-family: "Open Sans";	
+    font-size: 28px;	
+    font-weight: bold;	
+    line-height: 39px;
+}
+
+.header {
+    background: $secondary-bkg;
+    box-shadow: $box-shadow;
+    height: $navbar-height;
+    display: flex;
+    align-items: center;
+
+    .select-chat-header {	
+        @extend .select-chat-title;
+        margin-left: 15px;
+    }
+
+    .sq-rings {	
+        height: 34px;	
+        width: 35px;
+        margin-left: 38px;
+    }
+
+    .user-nav {
+        position: absolute;
+        right: 15px;
+
+        .menu {
+            border: none !important;
+            background: transparent;
+        }
+
+        .globe {
+            margin-right: 15px;
+            color: white;
+        }
+
+        .user {
+            color: white;
+        }
+        .icon {
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .google-login-btn {
+        position: absolute;
+        right: 15px;
+    }
+}
+
+.user-nav-menu {
+    left: unset !important;
+    right: 0;
+}

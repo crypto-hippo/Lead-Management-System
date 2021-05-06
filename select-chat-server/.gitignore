@@ -1,0 +1,5 @@
+node_modules
+build
+.env
+client_secret_705280963197-khioatp3vr5v1d8giomgfnh6qvqcte4s.apps.googleusercontent.com.json
+firebase

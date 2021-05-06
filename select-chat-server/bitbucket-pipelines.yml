@@ -1,0 +1,28 @@
+options:
+  docker: true
+
+definitions:
+  steps:  
+    - step: &build-image
+        name: Build Docker image
+        image: google/cloud-sdk:latest
+        deployment: test
+        script:
+          - docker build -t app:test -f test-app/Dockerfile .
+          - docker save --output tmp-image.docker app
+          - docker load --input ./tmp-image.docker
+          - echo $GCLOUD_API_KEYFILE | base64 -d > ./gcloud-api-key.json
+          - gcloud auth activate-service-account --key-file gcloud-api-key.json
+          - gcloud config set project $GCLOUD_PROJECT
+          - export IMAGE_NAME=gcr.io/selectchat/app:test
+          - docker tag app:test ${IMAGE_NAME}
+          - cat ./gcloud-api-key.json | docker login -u _json_key --password-stdin https://gcr.io
+          - docker push ${IMAGE_NAME}
+          - echo $KUBE_CONFIG_FILE | base64 -d > ~/.kube/config
+          - kubectl patch deployment app -p "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"force-update\":\"`date`\"}}}}}"
+
+pipelines:  
+  branches:
+    deployment-test:
+      - step: *build-image
+ 

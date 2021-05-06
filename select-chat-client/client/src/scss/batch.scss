@@ -1,0 +1,344 @@
+
+@import './variables.scss';
+
+.leadrow {
+
+}
+
+.lead-convo-card {
+    height: calc(50% - 20px);
+    margin-top: 20px;
+    box-shadow: $box-shadow-secondary;    
+
+    .convo-card-error {
+        margin-left: 25px;
+        color: darkred;
+        font-size: 14px;
+    }
+
+    .convo-actions {
+        display: flex;
+        align-items: center;
+
+        // .fa-refresh {
+        //     position: absolute;
+        //     right: 65px;
+        // }
+    
+        // .fa-comment {
+        //     position: absolute;
+        //     right: 15px;
+        // }
+
+    }
+
+    .lead-convo-body {
+        height: calc(100% - 50px);
+        display: flex;
+        align-items: center;
+
+        .campaign-grid {
+            padding-left: 40px;
+            margin-bottom: unset;
+
+            input, select {
+                border: none;
+                border-bottom: 1px solid gray;
+                padding: 10px;
+                width: 100%;
+                font-size: 1.3em;
+                background: none;
+                color: black !important;
+                &:focus, &:active {
+                    border-color: none !important;
+                    outline: none;
+                    border-bottom-color: $secondary-bkg;
+                }
+            }
+            select {
+                margin-top: 16px;
+            }
+        }
+
+        &.no-lead-selected {
+            display: flex;
+            align-items: center;
+        }
+
+        .no-lead-selected-text {
+            margin: 0 auto;
+            height: 24px;	width: 455px;	color: #8A8889;	font-family: "Open Sans";	font-size: 16px;	line-height: 24px;	text-align: center;
+        }
+    }
+
+    .lead-body-title {
+        margin: 10px;
+        width: auto;
+        border-radius: 16.5px;
+        height: 33px;
+        background-color: #69C9FF;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding-left: 6px;
+        
+    }
+
+    .lead-body-subtitle {
+        display: flex;
+        margin: 10px;
+
+        .lead-message-sent-icon {
+            background: #FFD054;
+            border-radius: 40px;
+            height: 39px;	
+            width: 40px;	
+            color: #FFFFFF;	
+            font-size: 28px;	
+            font-weight: bold;	
+            line-height: 39px;	
+            text-align: center;
+            box-shadow: 2px 2px 4px 0 rgba(71,70,70,0.5);
+        }
+
+        .lead-message-sent {
+            font-family: "Open Sans";	
+
+            display: flex;
+            align-items: center;
+            background: #FFD054;
+            width: calc(100% - 100px);
+            height: 36px;
+            background-color: #FFD054;	
+            box-shadow: 2px 2px 4px 0 rgba(71,70,70,0.5);
+            margin-left: 40px;
+            border-radius: 20px;
+            padding-left: 12px;
+            .fa-envelope {
+                color: white;
+
+            }
+        
+        }
+
+    }
+    
+    .lead-convo-header {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        border-bottom: 1px solid silver;
+        padding-left: 15px;
+        font-family: "Open Sans";	
+        font-size: 20px;
+        position: relative;
+    
+
+        .convo-card-options {
+            position: absolute;
+            right: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+
+            span:first-child {
+                margin-right: 20px;
+            }
+
+            .fa:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.leads {
+    width: 100%;
+    height: calc(100% - 90px);
+    overflow-y: scroll;
+
+    &.no-count {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.no-lead-selected-text {
+    margin: 0 auto;
+    height: 24px;	width: 455px;	color: #8A8889;	font-family: "Open Sans";	font-size: 16px;	line-height: 24px;	text-align: center;
+}
+
+.sub-right .ui.search {
+    display: inline;
+    input {
+        transition: width 2s !important;
+        -webkit-transition: width 2s, height 4s !important;
+    }
+}
+
+.campaign-dashboard-container {
+    width: calc(100% - 150px);
+    height: 100%;
+    font-family: "Open Sans" !important;	
+
+    .campaign-dashboard {
+        width: 100% !important;
+        height: 50%;
+
+        .plus.circle.icon {
+            margin-right: 15px;
+        }
+    }
+
+    .current-campaign-card {
+        height: 47%;
+        margin-top: 20px;
+        box-shadow: $box-shadow-secondary;
+    }
+}
+
+.leads-dashboard-container {
+
+    .convo-enabled  {
+
+        .conversation {
+            color: #EB7100;
+        }
+        .fa {
+            color: #017788;
+        }
+    }
+
+    .lead-text {
+        font-size: 16px;	
+        font-weight: 600;
+        margin-left: 20px;
+        color: white;
+    }
+
+    width: calc(100% - 150px);
+    height: 100%;
+    font-family: "Open Sans" !important;	
+
+    .leads-dashboard {
+        height: 50%;
+        width: 100% !important;
+        overflow: hidden;
+    }
+
+    
+}
+
+.batch-lead-row {
+    width: 100%;
+    padding-left: 6px;
+    border-bottom: 1px solid silver;
+    padding-left: 12px;
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+    .lead-name-link {
+        width: 150px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block;
+        white-space: nowrap;
+        margin-right: 12px;
+    }
+
+    .file-name {
+        width: 150px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block;
+        white-space: nowrap;
+        margin-right: 12px;
+    }
+
+    .ui.grid {
+        height: 60px;
+
+        .column {
+
+        }
+    }
+    
+    .vertical-rule {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .batch-key {
+        font-size: 16px;
+        width: 300px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block;
+        white-space: nowrap;
+        margin-right: 12px;
+    }
+
+    .batch-value {
+        color: black;
+        font-weight: bold;
+        margin-left: 6px;
+    }
+
+    .fa {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .fa-download {
+        position: absolute;
+        right: 15px;
+        color: $third-bkg;
+    }
+
+    .fa-star, .fa-comment {
+        font-size: 1.6em;
+    }
+
+    .fa-star.inactive {
+        color: black;
+    }
+
+    .fa-star.active {
+        color: #6CA03B;
+    }
+
+    .fa-trash {
+        color: $third-bkg;
+        position: absolute;
+        right: 65px;
+    }
+
+    .fa-minus-circle {
+        position: absolute;
+        right: 15px;
+        color: $third-bkg;
+    }
+
+    .fa-comment {
+        color: $third-bkg;
+        margin-left: 20px;
+    }
+
+    .lead-name-link {
+        width: 200px;
+        color: $third-bkg;
+        margin-left: 25px;
+        font-size: 16px;
+        font-family: "Open Sans";	
+
+        &:hover {
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+}

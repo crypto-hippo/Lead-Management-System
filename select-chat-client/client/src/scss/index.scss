@@ -1,0 +1,32 @@
+@import './_variables.scss';
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#root {
+    height: 100%;;
+}
+
+
+
+.btn-primary {
+    height: 31.44px;	
+    box-sizing: border-box;	
+    border: 2px solid $third-bkg;	
+    color: $third-bkg;
+    border-radius: 14.72px;	
+    background-color: #FFFFFF;
+    font-family: "Open Sans";	
+    font-size: 14px;	
+    font-weight: 600;	
+    letter-spacing: 0.5px;
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+

@@ -1,0 +1,111 @@
+@import './variables.scss';
+
+.modal-element {
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.modal-element-first {
+    margin-top: 50px;
+}
+
+.ReactModal__Overlay {
+
+}
+
+.ReactModal__Content {
+    width: 50%;
+    box-shadow: $box-shadow-secondary; 
+    margin: 0 auto;
+    .modal-error {
+        color: red;
+    }
+
+    label {
+        display: block;
+    }
+
+    input, select {
+        border: none;
+        border-bottom: 1px solid gray;
+        padding: 10px;
+        width: 100%;
+        font-size: 1.3em;
+        background: none;
+        
+        &:focus, &:active {
+            border-color: none !important;
+            outline: none;
+            border-bottom-color: $secondary-bkg;
+        }
+    }
+
+    .fa-spin {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: teal;
+    }
+    
+    .modal-actions {
+        position: absolute;
+        right: 20px;
+        font-size: 30px;
+        bottom: 15px;
+
+        button {
+            color: $third-bkg;
+            border: none;
+            &:first-child {
+                margin-right: 25px;
+            }
+            &.action-disabled {
+                color: lightgray;
+            }
+        }
+
+        & button:hover {
+            cursor: pointer;
+        }
+    }
+
+    .modal-title {
+        font-size: 30px;
+    }
+    
+    .modal-subtitle {
+        @extend .modal-element;
+        font-size: 20px;
+    }
+    
+    .upload-file-btn {
+        @extend .modal-element;
+    }
+
+    .lead-error-container {
+        height: 200px;
+        overflow-y: scroll;
+        margin: 20px;
+
+        .invalid-lead-error {
+            margin: 5px;
+            
+            .error-key {
+                color: red;
+                font-style: italic;
+                margin-left: 12px;
+            }
+
+            .error-value {
+                color: darkred;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .ReactModal__Content {
+        width: 80%;
+    }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "fake",
+  "version": "1.0.0",
+  "description": "Lead AI applied to the Insurance Industry.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://dylans-codes@bitbucket.org/selectquotelabs/fake.git"
+  },
+  "author": "Dylan Dannenhauer",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/selectquotelabs/fake#readme",
+  "dependencies": {
+    "@google-cloud/connect-datastore": "^4.0.0",
+    "@google-cloud/datastore": "^5.0.3",
+    "@sendgrid/mail": "^6.5.2",
+    "actions-on-google": "^2.12.0",
+    "body-parser": "^1.19.0",
+    "core-js": "^3.6.3",
+    "cors": "^2.8.5",
+    "csv-express": "^1.2.2",
+    "csv-writer": "^1.5.0",
+    "dialogflow": "^1.2.0",
+    "dialogflow-fulfillment": "^0.6.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "fast-csv": "^4.0.2",
+    "firebase-admin": "^8.9.2",
+    "firebase-functions": "^3.3.0",
+    "google-auth-library": "^5.7.0",
+    "mssql": "^6.0.1",
+    "path": "^0.12.7",
+    "sendgrid": "^5.2.3",
+    "sequelize": "^5.21.3",
+    "tedious": "^6.6.5",
+    "twilio": "^3.39.4",
+    "typedi": "^0.8.0",
+    "uuid": "^3.4.0"
+  },
+  "proxy": "http://localhost:8080",
+  "devDependencies": {
+    "sequelize-cli": "^5.5.1"
+  }
+}
